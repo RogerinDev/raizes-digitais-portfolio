@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Navbar from "@/components/Navbar";
 import FadeUp from "@/components/FadeUp";
 import Timeline from "@/components/Timeline";
 import AnimatedBackground from "@/components/AnimatedBackground";
@@ -12,26 +13,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-zinc-950 text-zinc-50 font-sans selection:bg-emerald-500/30 overflow-x-hidden">
       {/* Navbar Dinâmica e Expansível (Mac OS Style) */}
-      <nav className="fixed top-6 left-1/2 -translate-x-1/2 z-50 group">
-        <div className="absolute -inset-x-32 -inset-y-8 z-0"></div>
-        <div className="relative z-10 flex items-center justify-center bg-zinc-900/60 backdrop-blur-xl border border-white/10 rounded-full shadow-[0_8px_32px_rgba(0,0,0,0.6)] h-14 px-1.5 transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] group-hover:px-4">
-          <div className="flex items-center overflow-hidden transition-all duration-500 max-w-0 opacity-0 group-hover:max-w-[200px] group-hover:opacity-100 group-hover:mr-2">
-            <div className="flex gap-1 whitespace-nowrap pl-2">
-              <Link href="#resumo" className="px-4 py-2 text-sm font-medium text-zinc-300 hover:text-emerald-300 hover:bg-emerald-500/10 rounded-full transition-colors">Resumo</Link>
-              <Link href="#evolucao" className="px-4 py-2 text-sm font-medium text-zinc-300 hover:text-emerald-300 hover:bg-emerald-500/10 rounded-full transition-colors">Evolução</Link>
-            </div>
-          </div>
-          <Link href="#resumo" className="flex-shrink-0 flex items-center justify-center w-11 h-11 rounded-full bg-zinc-800/80 hover:bg-zinc-700/80 transition-colors shadow-inner border border-zinc-700/50 z-20">
-            <img src="/raizes-digitais-portfolio/logo.png" alt="Ícone Raízes Digitais" className="w-7 h-7 opacity-100 object-contain" />
-          </Link>
-          <div className="flex items-center overflow-hidden transition-all duration-500 max-w-0 opacity-0 group-hover:max-w-[200px] group-hover:opacity-100 group-hover:ml-2">
-            <div className="flex gap-1 whitespace-nowrap pr-2">
-              <Link href="#arquitetura" className="px-4 py-2 text-sm font-medium text-zinc-300 hover:text-emerald-300 hover:bg-emerald-500/10 rounded-full transition-colors">Arquitetura</Link>
-              <Link href="#equipe" className="px-4 py-2 text-sm font-medium text-zinc-300 hover:text-emerald-300 hover:bg-emerald-500/10 rounded-full transition-colors">Equipe</Link>
-            </div>
-          </div>
-        </div>
-      </nav>
+      <Navbar />
 
       {/* Hero Section */}
       <section 

@@ -111,10 +111,10 @@ function TeamCard({ member }: { member: typeof teamMembers[0] }) {
           <img 
             src={member.image} 
             alt={member.name}
-            className="w-full h-full object-cover grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500 ease-out"
+            className="w-full h-full object-cover grayscale-0 opacity-100 md:grayscale md:opacity-70 md:group-hover:grayscale-0 md:group-hover:opacity-100 md:group-hover:scale-105 transition-all duration-500 ease-out"
           />
         ) : (
-          <svg className="w-12 h-12 text-zinc-600 grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 group-hover:text-emerald-500 group-hover:scale-105 transition-all duration-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <svg className="w-12 h-12 text-zinc-600 grayscale-0 opacity-100 md:grayscale md:opacity-70 md:group-hover:grayscale-0 md:group-hover:opacity-100 md:group-hover:text-emerald-500 md:group-hover:scale-105 transition-all duration-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
           </svg>
         )}
@@ -124,8 +124,8 @@ function TeamCard({ member }: { member: typeof teamMembers[0] }) {
       <h4 className="font-semibold text-xl text-zinc-100 text-center z-10">{member.name}</h4>
       <span className="text-sm font-medium text-emerald-400 mt-2 text-center z-10">{member.role}</span>
 
-      {/* Redes Sociais (Slide Up) */}
-      <div className="flex gap-4 mt-6 absolute bottom-6 translate-y-8 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 ease-out z-10">
+      {/* Redes Sociais */}
+      <div className="flex gap-4 mt-6 static md:absolute md:bottom-6 translate-y-0 opacity-100 md:translate-y-8 md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 transition-all duration-500 ease-out z-10">
         <a href={member.github} className="p-2 rounded-full bg-zinc-800/80 hover:bg-emerald-500 hover:text-zinc-950 text-zinc-400 transition-colors">
           <GithubIcon className="w-5 h-5" />
         </a>

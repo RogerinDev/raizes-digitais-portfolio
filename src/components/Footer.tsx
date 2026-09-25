@@ -66,7 +66,7 @@ export default function Footer() {
       </motion.div>
 
       {/* Conteúdo Institucional em Destaque */}
-      <div className="relative z-10 flex flex-col items-center justify-center text-zinc-500 text-sm space-y-2 h-full pb-8">
+      <div className="relative z-10 flex flex-col items-center justify-center text-center text-zinc-500 text-xs md:text-sm space-y-2 h-full pb-8 px-4">
         <p className="font-medium text-zinc-300">Projeto de Extensão Universitária — CEFET-MG</p>
         <p>© {new Date().getFullYear()} CEFET-MG campus Varginha. Todos os direitos reservados.</p>
       </div>
