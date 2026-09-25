@@ -3,44 +3,71 @@ import Link from "next/link";
 export default function Home() {
   return (
     <div className="min-h-screen bg-zinc-950 text-zinc-50 font-sans selection:bg-emerald-500/30">
-      {/* Navbar Moderna (Floating Pill / Glassmorphism) */}
-      <nav className="fixed top-6 left-1/2 -translate-x-1/2 z-50">
-        <div className="flex items-center gap-1 md:gap-2 px-2 py-2 bg-zinc-900/40 backdrop-blur-lg border border-white/5 rounded-full shadow-[0_8px_32px_rgba(0,0,0,0.4)]">
-          <Link href="#resumo" className="flex items-center justify-center w-9 h-9 rounded-full bg-zinc-800/30 ml-1 hover:bg-zinc-700/50 transition-colors">
-             <img src="/raizes-digitais-portfolio/logo.png" alt="Ícone Raízes Digitais" className="w-5 h-5 opacity-90 object-contain" />
+      {/* Navbar Dinâmica e Expansível (Mac OS Style) */}
+      <nav className="fixed top-6 left-1/2 -translate-x-1/2 z-50 group">
+        {/* Hit area invisível: prevê a intenção do mouse e expande antes mesmo de encostar no botão */}
+        <div className="absolute -inset-x-32 -inset-y-8 z-0"></div>
+        
+        <div className="relative z-10 flex items-center justify-center bg-zinc-900/60 backdrop-blur-xl border border-white/10 rounded-full shadow-[0_8px_32px_rgba(0,0,0,0.6)] h-14 px-1.5 transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] group-hover:px-4">
+          
+          {/* Links da Esquerda */}
+          <div className="flex items-center overflow-hidden transition-all duration-500 max-w-0 opacity-0 group-hover:max-w-[200px] group-hover:opacity-100 group-hover:mr-2">
+            <div className="flex gap-1 whitespace-nowrap pl-2">
+              <Link href="#resumo" className="px-4 py-2 text-sm font-medium text-zinc-300 hover:text-emerald-300 hover:bg-emerald-500/10 rounded-full transition-colors">Resumo</Link>
+              <Link href="#evolucao" className="px-4 py-2 text-sm font-medium text-zinc-300 hover:text-emerald-300 hover:bg-emerald-500/10 rounded-full transition-colors">Evolução</Link>
+            </div>
+          </div>
+
+          {/* Ícone Centralizado (Maior e Fixo) */}
+          <Link href="#resumo" className="flex-shrink-0 flex items-center justify-center w-11 h-11 rounded-full bg-zinc-800/80 hover:bg-zinc-700/80 transition-colors shadow-inner border border-zinc-700/50 z-20">
+            <img src="/raizes-digitais-portfolio/logo.png" alt="Ícone Raízes Digitais" className="w-7 h-7 opacity-100 object-contain" />
           </Link>
-          <div className="w-[1px] h-5 bg-zinc-800 mx-1" />
-          <Link href="#resumo" className="px-4 py-2 text-sm font-medium text-zinc-400 hover:text-emerald-300 hover:bg-emerald-500/10 rounded-full transition-all duration-300 ease-out">Resumo</Link>
-          <Link href="#evolucao" className="px-4 py-2 text-sm font-medium text-zinc-400 hover:text-emerald-300 hover:bg-emerald-500/10 rounded-full transition-all duration-300 ease-out">Evolução</Link>
-          <Link href="#arquitetura" className="px-4 py-2 text-sm font-medium text-zinc-400 hover:text-emerald-300 hover:bg-emerald-500/10 rounded-full transition-all duration-300 ease-out">Arquitetura</Link>
-          <Link href="#equipe" className="px-4 py-2 text-sm font-medium text-zinc-400 hover:text-emerald-300 hover:bg-emerald-500/10 rounded-full transition-all duration-300 ease-out">Equipe</Link>
+
+          {/* Links da Direita */}
+          <div className="flex items-center overflow-hidden transition-all duration-500 max-w-0 opacity-0 group-hover:max-w-[200px] group-hover:opacity-100 group-hover:ml-2">
+            <div className="flex gap-1 whitespace-nowrap pr-2">
+              <Link href="#arquitetura" className="px-4 py-2 text-sm font-medium text-zinc-300 hover:text-emerald-300 hover:bg-emerald-500/10 rounded-full transition-colors">Arquitetura</Link>
+              <Link href="#equipe" className="px-4 py-2 text-sm font-medium text-zinc-300 hover:text-emerald-300 hover:bg-emerald-500/10 rounded-full transition-colors">Equipe</Link>
+            </div>
+          </div>
+          
         </div>
       </nav>
 
       {/* Hero Section */}
-      <section id="resumo" className="pt-32 pb-24 px-6 relative overflow-hidden">
-        {/* Glow effect */}
-        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-96 h-96 bg-emerald-500/10 blur-[120px] rounded-full pointer-events-none" />
+      <section 
+        id="resumo" 
+        className="pt-32 pb-24 px-6 relative overflow-hidden bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: 'url("/raizes-digitais-portfolio/hero-bg.png")' }}
+      >
+        {/* Overlay escuro para garantir leitura */}
+        <div className="absolute inset-0 bg-zinc-950/30" />
         
         <div className="max-w-6xl mx-auto text-center space-y-8 relative z-10">
           {/* Logo Flutuante */}
           <div className="flex justify-center mb-8">
-            <div className="relative w-32 h-32 md:w-40 md:h-40 animate-[bounce_4s_infinite] drop-shadow-[0_0_25px_rgba(16,185,129,0.2)]">
+            <div className="relative w-32 h-32 md:w-40 md:h-40 animate-[bounce_4s_infinite] drop-shadow-[0_0_25px_rgba(16,185,129,0.5)]">
               <img src="/raizes-digitais-portfolio/logo.png" alt="Logo Raízes Digitais" className="w-full h-full object-contain" />
             </div>
           </div>
 
-          <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight text-zinc-100">
+          <h1 
+            className="text-5xl md:text-7xl font-extrabold tracking-tight text-white"
+            style={{ textShadow: '0 2px 15px rgba(0,0,0,1), 0 0 5px rgba(0,0,0,1), 0 0 20px rgba(0,0,0,0.8)' }}
+          >
             Raízes <span className="text-emerald-400">Digitais</span>
           </h1>
-          <p className="text-lg md:text-xl text-zinc-400 max-w-2xl mx-auto leading-relaxed">
+          <p 
+            className="text-lg md:text-xl text-zinc-50 max-w-2xl mx-auto leading-relaxed font-semibold"
+            style={{ textShadow: '0 2px 10px rgba(0,0,0,1), 0 0 3px rgba(0,0,0,1)' }}
+          >
             Cultivando a Inovação com IA Generativa na Cafeicultura Sul-Mineira. 
             Unindo a tradição da cafeicultura com as fronteiras da inteligência artificial.
           </p>
           <div className="pt-8">
             <Link 
               href="#evolucao" 
-              className="inline-flex h-12 items-center justify-center rounded-full bg-emerald-500 px-8 text-sm font-semibold text-zinc-950 transition-colors hover:bg-emerald-400 shadow-[0_0_20px_rgba(16,185,129,0.3)]"
+              className="inline-flex h-12 items-center justify-center rounded-full bg-emerald-500 px-8 text-sm font-semibold text-zinc-950 transition-colors hover:bg-emerald-400 shadow-[0_0_20px_rgba(16,185,129,0.5)] border border-emerald-400/50"
             >
               Conheça o Projeto
             </Link>
