@@ -1,5 +1,6 @@
 import Link from "next/link";
 import FadeUp from "@/components/FadeUp";
+import Timeline from "@/components/Timeline";
 
 export default function Home() {
   const techCards = [
@@ -95,35 +96,9 @@ export default function Home() {
             </div>
           </FadeUp>
 
-          <div className="relative border-l border-zinc-800 ml-4 md:ml-8 space-y-12 pb-8">
-            <FadeUp delay={0.2}>
-              <div className="relative pl-8 md:pl-12">
-                <div className="absolute -left-3 top-1 h-6 w-6 rounded-full border-4 border-zinc-950 bg-zinc-700" />
-                <div className="space-y-2">
-                  <span className="text-sm font-mono text-zinc-500">Fase 1</span>
-                  <h3 className="text-xl font-semibold text-zinc-200">Protótipo em n8n</h3>
-                  <p className="text-zinc-400 leading-relaxed">
-                    Validação rápida de ideias com fluxos visuais. Uma abordagem low-code 
-                    para experimentar os primeiros cenários de integração de IA para o produtor rural.
-                  </p>
-                </div>
-              </div>
-            </FadeUp>
-
-            <FadeUp delay={0.4}>
-              <div className="relative pl-8 md:pl-12">
-                <div className="absolute -left-3 top-1 h-6 w-6 rounded-full border-4 border-zinc-950 bg-emerald-500 shadow-[0_0_15px_rgba(16,185,129,0.5)]" />
-                <div className="space-y-2">
-                  <span className="text-sm font-mono text-emerald-500">Fase 2</span>
-                  <h3 className="text-xl font-semibold text-zinc-200">Arquitetura Definitiva (Python)</h3>
-                  <p className="text-zinc-400 leading-relaxed">
-                    Desenvolvimento completo com Python, LangChain e FastAPI. Maior controle de 
-                    concorrência, robustez aprimorada e uso de um banco de dados vetorizado de alta performance.
-                  </p>
-                </div>
-              </div>
-            </FadeUp>
-          </div>
+          <FadeUp delay={0.2}>
+            <Timeline />
+          </FadeUp>
         </div>
       </section>
 
