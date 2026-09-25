@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, useMotionTemplate, useMotionValue } from "framer-motion";
+import { motion, type Variants, useMotionTemplate, useMotionValue } from "framer-motion";
 import React, { MouseEvent } from "react";
 
 const GithubIcon = ({ className }: { className?: string }) => (
@@ -62,7 +62,7 @@ const teamMembers = [
   }
 ];
 
-const containerVariants = {
+const containerVariants: Variants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
@@ -70,7 +70,7 @@ const containerVariants = {
   }
 };
 
-const itemVariants = {
+const itemVariants: Variants = {
   hidden: { opacity: 0, y: 30 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.16, 1, 0.3, 1] } }
 };
