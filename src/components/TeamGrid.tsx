@@ -57,7 +57,7 @@ const teamMembers = [
     name: "Luiz Henrique Garcia", 
     role: "Voluntário",
     image: "/raizes-digitais-portfolio/team/luiz.jpg",
-    github: "#",
+    github: "https://github.com/LuHenRe",
     linkedin: "#"
   }
 ];
