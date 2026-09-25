@@ -4,9 +4,9 @@ import Timeline from "@/components/Timeline";
 import AnimatedBackground from "@/components/AnimatedBackground";
 import TechGrid from "@/components/TechGrid";
 import TeamGrid from "@/components/TeamGrid";
+import VideoPitch from "@/components/VideoPitch";
 
 export default function Home() {
-
   return (
     <div className="min-h-screen bg-zinc-950 text-zinc-50 font-sans selection:bg-emerald-500/30 overflow-x-hidden">
       {/* Navbar Dinâmica e Expansível (Mac OS Style) */}
@@ -109,6 +109,9 @@ export default function Home() {
           <TechGrid />
         </div>
       </section>
+
+      {/* Video Pitch */}
+      <VideoPitch />
 
       {/* Nossa Equipe */}
       <section id="equipe" className="py-24 px-6 border-t border-zinc-900">
