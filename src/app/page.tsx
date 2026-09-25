@@ -3,17 +3,9 @@ import FadeUp from "@/components/FadeUp";
 import Timeline from "@/components/Timeline";
 import AnimatedBackground from "@/components/AnimatedBackground";
 import TechGrid from "@/components/TechGrid";
+import TeamGrid from "@/components/TeamGrid";
 
 export default function Home() {
-
-  const teamMembers = [
-    { name: "Prof. Bruno Monserrat Perillo", role: "Coordenador" },
-    { name: "Prof. Eduardo Gomes Carvalho", role: "Coorientador" },
-    { name: "Prof. Lazaro Eduardo da Silva", role: "Coorientador" },
-    { name: "Rogerio Otávio Filho", role: "Bolsista de Projeto de Extensão" },
-    { name: "Antonio Prado Horta", role: "Bolsista de Projeto de Extensão" },
-    { name: "Luiz Henrique Garcia", role: "Voluntário" }
-  ];
 
   return (
     <div className="min-h-screen bg-zinc-950 text-zinc-50 font-sans selection:bg-emerald-500/30 overflow-x-hidden">
@@ -128,13 +120,7 @@ export default function Home() {
             </div>
           </FadeUp>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {teamMembers.map((member, index) => (
-              <FadeUp key={index} delay={0.1 * (index + 1)}>
-                <TeamMember name={member.name} role={member.role} />
-              </FadeUp>
-            ))}
-          </div>
+          <TeamGrid />
         </div>
       </section>
 
@@ -143,21 +129,6 @@ export default function Home() {
         <p>Projeto de Extensão Universitária — CEFET-MG</p>
         <p className="mt-2">© {new Date().getFullYear()} CEFET-MG campus Varginha. Todos os direitos reservados.</p>
       </footer>
-    </div>
-  );
-}
-
-function TeamMember({ name, role }: { name: string, role: string }) {
-  return (
-    <div className="flex flex-col items-center p-6 bg-zinc-900/50 rounded-2xl border border-zinc-800/50 hover:bg-zinc-900 transition-colors text-center h-full">
-      <div className="w-24 h-24 rounded-full bg-zinc-800 mb-4 overflow-hidden flex items-center justify-center border-2 border-zinc-800">
-        {/* Placeholder image icon */}
-        <svg className="w-10 h-10 text-zinc-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-        </svg>
-      </div>
-      <h4 className="font-medium text-zinc-200">{name}</h4>
-      <span className="text-sm text-emerald-400 mt-1">{role}</span>
     </div>
   );
 }
