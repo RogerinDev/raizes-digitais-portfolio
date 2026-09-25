@@ -83,8 +83,12 @@ export default function Home() {
         <div className="relative z-10 max-w-4xl mx-auto space-y-16">
           <FadeUp>
             <div className="text-center space-y-4">
-              <h2 className="text-3xl md:text-4xl font-bold">Evolução</h2>
-              <p className="text-zinc-400">Da validação rápida à arquitetura robusta e escalável.</p>
+              <h2 className="text-3xl md:text-4xl font-bold" style={{ textShadow: '0 2px 15px rgba(0,0,0,1), 0 0 5px rgba(0,0,0,1), 0 0 20px rgba(0,0,0,0.8)' }}>
+                Evolução
+              </h2>
+              <p className="text-zinc-300 font-medium" style={{ textShadow: '0 2px 10px rgba(0,0,0,1), 0 0 3px rgba(0,0,0,1)' }}>
+                Da validação rápida à arquitetura robusta e escalável.
+              </p>
             </div>
           </FadeUp>
 
@@ -105,8 +109,12 @@ export default function Home() {
         <div className="relative z-10 max-w-6xl mx-auto space-y-16">
           <FadeUp>
             <div className="text-center space-y-4">
-              <h2 className="text-3xl md:text-4xl font-bold">Tecnologia</h2>
-              <p className="text-zinc-400">O motor de inteligência artificial por trás do assistente.</p>
+              <h2 className="text-3xl md:text-4xl font-bold" style={{ textShadow: '0 2px 15px rgba(0,0,0,1), 0 0 5px rgba(0,0,0,1), 0 0 20px rgba(0,0,0,0.8)' }}>
+                Tecnologia
+              </h2>
+              <p className="text-zinc-300 font-medium" style={{ textShadow: '0 2px 10px rgba(0,0,0,1), 0 0 3px rgba(0,0,0,1)' }}>
+                O motor de inteligência artificial por trás do assistente.
+              </p>
             </div>
           </FadeUp>
 
@@ -121,8 +129,12 @@ export default function Home() {
         <div className="relative z-10 max-w-6xl mx-auto space-y-16">
           <FadeUp>
             <div className="text-center space-y-4">
-              <h2 className="text-3xl md:text-4xl font-bold">Nossa Equipe</h2>
-              <p className="text-zinc-400">Pesquisadores e desenvolvedores dedicados à inovação agrícola.</p>
+              <h2 className="text-3xl md:text-4xl font-bold" style={{ textShadow: '0 2px 15px rgba(0,0,0,1), 0 0 5px rgba(0,0,0,1), 0 0 20px rgba(0,0,0,0.8)' }}>
+                Nossa Equipe
+              </h2>
+              <p className="text-zinc-300 font-medium" style={{ textShadow: '0 2px 10px rgba(0,0,0,1), 0 0 3px rgba(0,0,0,1)' }}>
+                Pesquisadores e desenvolvedores dedicados à inovação agrícola.
+              </p>
             </div>
           </FadeUp>
 

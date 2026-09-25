@@ -21,8 +21,10 @@ export default function VideoPitch() {
         
         {/* Cabeçalho */}
         <div className="text-center space-y-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-zinc-100">O Projeto em Ação</h2>
-          <p className="text-zinc-400">
+          <h2 className="text-3xl md:text-4xl font-bold text-zinc-100" style={{ textShadow: '0 2px 15px rgba(0,0,0,1), 0 0 5px rgba(0,0,0,1), 0 0 20px rgba(0,0,0,0.8)' }}>
+            O Projeto em Ação
+          </h2>
+          <p className="text-zinc-300 font-medium" style={{ textShadow: '0 2px 10px rgba(0,0,0,1), 0 0 3px rgba(0,0,0,1)' }}>
             Veja como a Inteligência Artificial transforma a gestão na cafeicultura
           </p>
         </div>
