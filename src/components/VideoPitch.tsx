@@ -1,6 +1,7 @@
 "use client";
 
 import { motion, type Variants } from "framer-motion";
+import AnimatedBackground from "@/components/AnimatedBackground";
 
 const containerVariants: Variants = {
   hidden: { opacity: 0, scale: 0.95, y: 20 },
@@ -14,8 +15,9 @@ const containerVariants: Variants = {
 
 export default function VideoPitch() {
   return (
-    <section className="py-20 px-6 relative z-10">
-      <div className="max-w-4xl mx-auto space-y-10">
+    <section className="relative py-24 px-6 border-t border-zinc-900 bg-zinc-950 overflow-hidden">
+      <AnimatedBackground />
+      <div className="relative z-10 max-w-4xl mx-auto space-y-10">
         
         {/* Cabeçalho */}
         <div className="text-center space-y-4">

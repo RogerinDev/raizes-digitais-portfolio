@@ -5,6 +5,7 @@ import AnimatedBackground from "@/components/AnimatedBackground";
 import TechGrid from "@/components/TechGrid";
 import TeamGrid from "@/components/TeamGrid";
 import VideoPitch from "@/components/VideoPitch";
+import TeamBackground from "@/components/TeamBackground";
 
 export default function Home() {
   return (
@@ -72,6 +73,9 @@ export default function Home() {
         </FadeUp>
       </section>
 
+      {/* Video Pitch */}
+      <VideoPitch />
+
       {/* Evolução (Linha do Tempo) */}
       <section id="evolucao" className="relative py-24 px-6 border-t border-zinc-900 bg-zinc-950 overflow-hidden">
         <AnimatedBackground />
@@ -110,12 +114,11 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Video Pitch */}
-      <VideoPitch />
-
       {/* Nossa Equipe */}
-      <section id="equipe" className="py-24 px-6 border-t border-zinc-900">
-        <div className="max-w-6xl mx-auto space-y-16">
+      <section id="equipe" className="relative py-24 px-6 border-t border-zinc-900 bg-zinc-950 overflow-hidden">
+        <TeamBackground />
+        
+        <div className="relative z-10 max-w-6xl mx-auto space-y-16">
           <FadeUp>
             <div className="text-center space-y-4">
               <h2 className="text-3xl md:text-4xl font-bold">Nossa Equipe</h2>
