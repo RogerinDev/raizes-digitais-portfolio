@@ -7,6 +7,10 @@ export default function Home() {
       {/* Navbar Moderna (Floating Pill / Glassmorphism) */}
       <nav className="fixed top-6 left-1/2 -translate-x-1/2 z-50">
         <div className="flex items-center gap-1 md:gap-2 px-2 py-2 bg-zinc-900/40 backdrop-blur-lg border border-white/5 rounded-full shadow-[0_8px_32px_rgba(0,0,0,0.4)]">
+          <Link href="#resumo" className="flex items-center justify-center w-9 h-9 rounded-full bg-zinc-800/30 ml-1 hover:bg-zinc-700/50 transition-colors">
+             <Image src="/logo.png" alt="Ícone Raízes Digitais" width={20} height={20} className="opacity-90" />
+          </Link>
+          <div className="w-[1px] h-5 bg-zinc-800 mx-1" />
           <Link href="#resumo" className="px-4 py-2 text-sm font-medium text-zinc-400 hover:text-emerald-300 hover:bg-emerald-500/10 rounded-full transition-all duration-300 ease-out">Resumo</Link>
           <Link href="#evolucao" className="px-4 py-2 text-sm font-medium text-zinc-400 hover:text-emerald-300 hover:bg-emerald-500/10 rounded-full transition-all duration-300 ease-out">Evolução</Link>
           <Link href="#arquitetura" className="px-4 py-2 text-sm font-medium text-zinc-400 hover:text-emerald-300 hover:bg-emerald-500/10 rounded-full transition-all duration-300 ease-out">Arquitetura</Link>
@@ -20,6 +24,13 @@ export default function Home() {
         <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-96 h-96 bg-emerald-500/10 blur-[120px] rounded-full pointer-events-none" />
         
         <div className="max-w-6xl mx-auto text-center space-y-8 relative z-10">
+          {/* Logo Flutuante */}
+          <div className="flex justify-center mb-8">
+            <div className="relative w-32 h-32 md:w-40 md:h-40 animate-[bounce_4s_infinite] drop-shadow-[0_0_25px_rgba(16,185,129,0.2)]">
+              <Image src="/logo.png" alt="Logo Raízes Digitais" fill className="object-contain" priority />
+            </div>
+          </div>
+
           <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight text-zinc-100">
             Raízes <span className="text-emerald-400">Digitais</span>
           </h1>
