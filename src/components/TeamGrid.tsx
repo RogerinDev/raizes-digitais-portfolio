@@ -22,8 +22,8 @@ const teamMembers = [
     name: "Prof. Bruno Monserrat Perillo", 
     role: "Coordenador",
     image: "/raizes-digitais-portfolio/team/bruno.jpg",
-    github: "#",
-    linkedin: "#"
+    github: "https://github.com/brunoperillo",
+    linkedin: "https://brunoperillo.com/"
   },
   { 
     name: "Prof. Eduardo Gomes Carvalho", 
@@ -36,8 +36,8 @@ const teamMembers = [
     name: "Prof. Lazaro Eduardo da Silva", 
     role: "Coorientador",
     image: "/raizes-digitais-portfolio/team/lazaro.jpg",
-    github: "#",
-    linkedin: "#"
+    github: "https://github.com/lazarodu",
+    linkedin: "https://www.linkedin.com/in/lazarodu/"
   },
   { 
     name: "Rogerio Otávio Filho", 
@@ -51,7 +51,7 @@ const teamMembers = [
     role: "Bolsista de Projeto de Extensão",
     image: "/raizes-digitais-portfolio/team/antonio.jpg",
     github: "#",
-    linkedin: "#"
+    linkedin: "http://linkedin.com/in/antonio-prado-horta/"
   },
   { 
     name: "Luiz Henrique Garcia", 
@@ -126,12 +126,16 @@ function TeamCard({ member }: { member: typeof teamMembers[0] }) {
 
       {/* Redes Sociais */}
       <div className="flex gap-4 mt-6 static md:absolute md:bottom-6 translate-y-0 opacity-100 md:translate-y-8 md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 transition-all duration-500 ease-out z-10">
-        <a href={member.github} className="p-2 rounded-full bg-zinc-800/80 hover:bg-emerald-500 hover:text-zinc-950 text-zinc-400 transition-colors">
-          <GithubIcon className="w-5 h-5" />
-        </a>
-        <a href={member.linkedin} className="p-2 rounded-full bg-zinc-800/80 hover:bg-emerald-500 hover:text-zinc-950 text-zinc-400 transition-colors">
-          <LinkedinIcon className="w-5 h-5" />
-        </a>
+        {member.github !== "#" && (
+          <a href={member.github} target="_blank" rel="noopener noreferrer" className="p-2 rounded-full bg-zinc-800/80 hover:bg-emerald-500 hover:text-zinc-950 text-zinc-400 transition-colors">
+            <GithubIcon className="w-5 h-5" />
+          </a>
+        )}
+        {member.linkedin !== "#" && (
+          <a href={member.linkedin} target="_blank" rel="noopener noreferrer" className="p-2 rounded-full bg-zinc-800/80 hover:bg-emerald-500 hover:text-zinc-950 text-zinc-400 transition-colors">
+            <LinkedinIcon className="w-5 h-5" />
+          </a>
+        )}
       </div>
     </motion.div>
   );
