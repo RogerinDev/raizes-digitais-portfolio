@@ -40,12 +40,27 @@ export default function Footer() {
             {/* Bracinho curto e gordinho */}
             <rect x="28" y="20" width="6" height="4" rx="2" />
             
-            {/* Pernas curtinhas */}
-            <rect x="14" y="32" width="4" height="8" rx="1" />
-            <rect x="16" y="38" width="4" height="4" rx="1" />
+            {/* Animação de Passos (Toggling Legs) */}
+            <style>{`
+              @keyframes dinoWalk1 { 0%, 49.9% { opacity: 1; } 50%, 100% { opacity: 0; } }
+              @keyframes dinoWalk2 { 0%, 49.9% { opacity: 0; } 50%, 100% { opacity: 1; } }
+              .leg-1 { animation: dinoWalk1 0.3s infinite; }
+              .leg-2 { animation: dinoWalk2 0.3s infinite; }
+            `}</style>
+
+            {/* Frame 1 (Perna esquerda no chão, direita encolhida) */}
+            <g className="leg-1">
+              <rect x="14" y="32" width="4" height="8" rx="1" />
+              <rect x="16" y="38" width="4" height="4" rx="1" />
+              <rect x="22" y="32" width="4" height="4" rx="1" />
+            </g>
             
-            <rect x="22" y="32" width="4" height="8" rx="1" />
-            <rect x="24" y="38" width="4" height="4" rx="1" />
+            {/* Frame 2 (Perna direita no chão, esquerda encolhida) */}
+            <g className="leg-2">
+              <rect x="14" y="32" width="4" height="4" rx="1" />
+              <rect x="22" y="32" width="4" height="8" rx="1" />
+              <rect x="24" y="38" width="4" height="4" rx="1" />
+            </g>
           </g>
         </svg>
       </motion.div>
