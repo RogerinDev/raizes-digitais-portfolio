@@ -6,6 +6,7 @@ import TechGrid from "@/components/TechGrid";
 import TeamGrid from "@/components/TeamGrid";
 import VideoPitch from "@/components/VideoPitch";
 import TeamBackground from "@/components/TeamBackground";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -142,11 +143,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="py-8 border-t border-zinc-900 bg-zinc-950 text-center text-sm text-zinc-500">
-        <p>Projeto de Extensão Universitária — CEFET-MG</p>
-        <p className="mt-2">© {new Date().getFullYear()} CEFET-MG campus Varginha. Todos os direitos reservados.</p>
-      </footer>
+      <Footer />
     </div>
   );
 }
