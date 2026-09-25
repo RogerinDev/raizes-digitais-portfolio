@@ -1,6 +1,7 @@
 import Link from "next/link";
 import FadeUp from "@/components/FadeUp";
 import Timeline from "@/components/Timeline";
+import AnimatedBackground from "@/components/AnimatedBackground";
 
 export default function Home() {
   const techCards = [
@@ -16,7 +17,7 @@ export default function Home() {
     { name: "Prof. Bruno Monserrat Perillo", role: "Coordenador" },
     { name: "Prof. Eduardo Gomes Carvalho", role: "Coorientador" },
     { name: "Prof. Lazaro Eduardo da Silva", role: "Coorientador" },
-    { name: "Rogério Otávio Filho", role: "Bolsista de Projeto de Extensão" },
+    { name: "Rogerio Otávio Filho", role: "Bolsista de Projeto de Extensão" },
     { name: "Antonio Prado Horta", role: "Bolsista de Projeto de Extensão" },
     { name: "Luiz Henrique Garcia", role: "Voluntário" }
   ];
@@ -87,11 +88,13 @@ export default function Home() {
       </section>
 
       {/* Evolução (Linha do Tempo) */}
-      <section id="evolucao" className="py-24 px-6 border-t border-zinc-900 bg-zinc-950">
-        <div className="max-w-4xl mx-auto space-y-16">
+      <section id="evolucao" className="relative py-24 px-6 border-t border-zinc-900 bg-zinc-950 overflow-hidden">
+        <AnimatedBackground />
+        
+        <div className="relative z-10 max-w-4xl mx-auto space-y-16">
           <FadeUp>
             <div className="text-center space-y-4">
-              <h2 className="text-3xl md:text-4xl font-bold">A Evolução</h2>
+              <h2 className="text-3xl md:text-4xl font-bold">Evolução</h2>
               <p className="text-zinc-400">Da validação rápida à arquitetura robusta e escalável.</p>
             </div>
           </FadeUp>
@@ -107,7 +110,7 @@ export default function Home() {
         <div className="max-w-6xl mx-auto space-y-16">
           <FadeUp>
             <div className="text-center space-y-4">
-              <h2 className="text-3xl md:text-4xl font-bold">A Tecnologia</h2>
+              <h2 className="text-3xl md:text-4xl font-bold">Tecnologia</h2>
               <p className="text-zinc-400">O motor de inteligência artificial por trás do assistente.</p>
             </div>
           </FadeUp>
