@@ -1,4 +1,5 @@
-import Link from "next/link";
+"use client";
+
 import Navbar from "@/components/Navbar";
 import FadeUp from "@/components/FadeUp";
 import Timeline from "@/components/Timeline";
@@ -10,6 +11,15 @@ import TeamBackground from "@/components/TeamBackground";
 import Footer from "@/components/Footer";
 
 export default function Home() {
+  const handleScrollToVideo = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    const element = document.getElementById("video");
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth", block: "start" });
+      window.history.replaceState(null, "", "#video");
+    }
+  };
+
   return (
     <div className="min-h-screen bg-zinc-950 text-zinc-50 font-sans selection:bg-emerald-500/30 overflow-x-hidden">
       {/* Navbar Dinâmica e Expansível (Mac OS Style) */}
@@ -45,12 +55,13 @@ export default function Home() {
               Unindo a tradição da cafeicultura com as fronteiras da inteligência artificial.
             </p>
             <div className="pt-8">
-              <Link 
-                href="#evolucao" 
-                className="inline-flex h-12 items-center justify-center rounded-full bg-emerald-500 px-8 text-sm font-semibold text-zinc-950 transition-colors hover:bg-emerald-400 shadow-[0_0_20px_rgba(16,185,129,0.5)] border border-emerald-400/50"
+              <a 
+                href="#video" 
+                onClick={handleScrollToVideo}
+                className="inline-flex h-12 items-center justify-center rounded-full bg-emerald-500 px-8 text-sm font-semibold text-zinc-950 transition-colors hover:bg-emerald-400 shadow-[0_0_20px_rgba(16,185,129,0.5)] border border-emerald-400/50 cursor-pointer"
               >
                 Conheça o Projeto
-              </Link>
+              </a>
             </div>
           </div>
         </FadeUp>

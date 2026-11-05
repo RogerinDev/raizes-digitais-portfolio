@@ -15,7 +15,7 @@ const containerVariants: Variants = {
 
 export default function VideoPitch() {
   return (
-    <section className="relative py-24 px-6 border-t border-zinc-900 bg-zinc-950 overflow-hidden">
+    <section id="video" className="relative py-24 px-6 border-t border-zinc-900 bg-zinc-950 overflow-hidden">
       <AnimatedBackground />
       <div className="relative z-10 max-w-4xl mx-auto space-y-10">
         
